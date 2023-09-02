@@ -3,3 +3,8 @@
 Link to our Research Paper:
 
 https://www.irjet.net/archives/V10/i4/IRJET-V10I4130.pdf
+
+
+Link to access the model1.h5 file:
+
+https://drive.google.com/file/d/1cJWbqiwNjm3hSNE7FIacpHdTZVtOW89P/view?usp=sharing
