@@ -1,0 +1,121 @@
+
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>{{ animal }} Information</title>
+	<link href="https://unpkg.com/tailwindcss@^2/dist/tailwind.min.css" rel="stylesheet">
+  </head>
+  <style>
+    table {
+      border-collapse: collapse;
+      border: 1px solid black;
+      opacity: 0.8;
+      font-family: Arial, Helvetica, sans-serif;
+
+     width: 100%;
+    }
+    tr {
+  border-bottom: 1px solid black;
+}
+tr:hover {background-color: #ddd;}
+td{
+  padding-top: 12px;
+  padding-bottom: 12px;
+  text-align: left;
+  background-color: #baf7e5;
+  color: rgb(0, 0, 0);
+}
+
+
+    </style>
+    
+  <body>
+    <header class="text-gray-600 body-font">
+      <div class="container mx-auto flex flex-wrap p-5 flex-col md:flex-row items-center">
+        <a class="flex title-font font-medium items-center text-gray-900 mb-4 md:mb-0" id="ss">
+          <svg xmlns="http://www.w3.org/2000/svg" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="w-10 h-10 text-white p-2 bg-green-500 rounded-full" viewBox="0 0 24 24">
+            <path d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5"></path>
+          </svg>
+          <span class="ml-3 text-xl">Endangered Species</span>
+        </a>
+        <nav class="md:ml-auto flex flex-wrap items-center text-base justify-center">
+          <a  href= "graphs.html" class="mr-5 hover:text-gray-900">Home</a>
+          <a class="mr-5 hover:text-gray-900">About Us</a>
+          <a  href="#3" class="mr-5 hover:text-gray-900">Photo Gallery</a>
+         
+        </nav>
+      
+      </div>
+    </header>
+    <h1>{{ animal }} Information</h1>
+    <table class="table-auto" style="border-collapse: collapse;">
+     <thead>
+        <tr>
+          <td style="border-right: 1px solid black; padding: 8px; background-color: #04AA6D;">Category</td>
+          <td style="border-right: 1px solid black; padding: 8px; background-color:#04AA6D;">Information</td>
+         
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td style="border-right: 1px solid black; padding: 8px;">Name</td>
+          <td style="border-right: 1px solid black; padding: 8px;">{{ animal_data['Common Name'].values[0] }}</td>
+        </tr>
+        <tr>
+          <td style="border-right: 1px solid black; padding: 8px;">Taxonomic Group</td>
+          <td style="border-right: 1px solid black; padding: 8px;">{{ animal_data['Taxonomic Group'].values[0] }}</td>
+        </tr>
+        <tr>
+          <td style="border-right: 1px solid black; padding: 8px;">Taxonomic Subgroup</td>
+          <td style="border-right: 1px solid black; padding: 8px;">{{ animal_data['Taxonomic Subgroup'].values[0] }}</td>
+        </tr>
+        <tr>
+          <td style="border-right: 1px solid black; padding: 8px;">Scientific Name</td>
+          <td style="border-right: 1px solid black; padding: 8px;">{{ animal_data['Scientific Name'].values[0] }}</td>
+        </tr>
+        <tr style="border-bottom: 1px solid black;">
+          <td style="border-right: 1px solid black; padding: 8px;">State Conservation Rank</td>
+          <td style="border-right: 1px solid black; padding: 8px;">{{ animal_data['State Conservation Rank'].values[0] }}</td>
+        </tr>
+      </tbody>
+    </table>
+    <footer class="text-gray-600 body-font" style="position: fixed; bottom: 0; width: 100%;">
+        <div class="container px-5 py-8 mx-auto flex items-center sm:flex-row flex-col">
+            <a class="flex title-font font-medium items-center md:justify-start justify-center text-gray-900">
+              <svg xmlns="http://www.w3.org/2000/svg" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="w-10 h-10 text-white p-2 bg-green-500 rounded-full" viewBox="0 0 24 24">
+                <path d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5"></path>
+              </svg>
+              <span class="ml-3 text-xl"></span>
+            </a>
+            <p class="text-sm text-gray-500 sm:ml-4 sm:pl-4 sm:border-l-2 sm:border-gray-200 sm:py-2 sm:mt-0 mt-4">© 2023 Endangered Species Analysis —
+              <a href="https://twitter.com/knyttneve" class="text-gray-600 ml-1" rel="noopener noreferrer" target="_blank">@ENSA</a>
+            </p>
+            <span class="inline-flex sm:ml-auto sm:mt-0 mt-4 justify-center sm:justify-start">
+              <a class="text-gray-500">
+                <svg fill="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="w-5 h-5" viewBox="0 0 24 24">
+                  <path d="M18 2h-3a5 5 0 00-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 011-1h3z"></path>
+                </svg>
+              </a>
+              <a class="ml-3 text-gray-500">
+                <svg fill="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="w-5 h-5" viewBox="0 0 24 24">
+                  <path d="M23 3a10.9 10.9 0 01-3.14 1.53 4.48 4.48 0 00-7.86 3v1A10.66 10.66 0 013 4s-4 9 5 13a11.64 11.64 0 01-7 2c9 5 20 0 20-11.5a4.5 4.5 0 00-.08-.83A7.72 7.72 0 0023 3z"></path>
+                </svg>
+              </a>
+              <a class="ml-3 text-gray-500">
+                <svg fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="w-5 h-5" viewBox="0 0 24 24">
+                  <rect width="20" height="20" x="2" y="2" rx="5" ry="5"></rect>
+                  <path d="M16 11.37A4 4 0 1112.63 8 4 4 0 0116 11.37zm1.5-4.87h.01"></path>
+                </svg>
+              </a>
+              <a class="ml-3 text-gray-500">
+                <svg fill="currentColor" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="0" class="w-5 h-5" viewBox="0 0 24 24">
+                  <path stroke="none" d="M16 8a6 6 0 016 6v7h-4v-7a2 2 0 00-2-2 2 2 0 00-2 2v7h-4v-7a6 6 0 016-6zM2 9h4v12H2z"></path>
+                  <circle cx="4" cy="4" r="2" stroke="none"></circle>
+                </svg>
+              </a>
+            </span>
+          </div>
+      </footer>
+    
+  </body>
+</html>
